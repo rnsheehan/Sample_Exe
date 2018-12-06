@@ -38,6 +38,9 @@ static const double PI_4 = (p); // pi / 4
 static const double PI_5 = ((4.0 / 5.0)*p); // pi / 5
 static const double PI_6 = ((2.0 / 3.0)*p); // pi / 6 
 
+static const int MAX_PATH_LENGTH = 250; // max. length for a directory in Windows OS
+static const std::string empty_str = ""; 
+
 #include "Templates.h"
 #include "Useful.h"
 

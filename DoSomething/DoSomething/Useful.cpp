@@ -113,3 +113,21 @@ void useful_funcs::read_into_vector(std::string &filename, std::vector<double> &
 		exit(EXIT_FAILURE); 
 	}
 }
+
+bool useful_funcs::file_exists(const std::string& name)
+{
+	// test to see if the file with name name exists
+	// https://stackoverflow.com/questions/12774207/fastest-way-to-check-if-a-file-exist-using-standard-c-c11-c
+	// function returns true if file exists, false otherwise
+
+	struct stat buffer;
+	return ( stat(name.c_str(), &buffer) == 0);
+}
+
+bool useful_funcs::valid_filename_length(const std::string &name)
+{
+	// Check that a string length is less than the MAX_PATH_LENGTH
+	// This only really applies to winows
+	
+	return static_cast<int>(name.length()) < MAX_PATH_LENGTH ? true : false;
+}
