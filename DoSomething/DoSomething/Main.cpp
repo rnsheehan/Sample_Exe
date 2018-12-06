@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 			// Program needs 2 or more parameters to run, remember that the name of the program is also considered a parameter
 			// argv[0] = program name
 
-			std::cout << "\nName of the program is " << argv[0] << ".exe\n";
+			std::cout << "Name of the program is " << argv[0] << ".exe\n";
 			std::cout << argc - 1 << " parameters were input into the program\n";
 			for (int count = 1; count < argc; count++) {
 				std::cout << "argv[" << count << "] = " << argv[count] << "\n";
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 			else {
 				std::string reason; 
 				std::string prog_name = argv[0]; 
-				reason = "\nError: " + prog_name + ".exe\n"; 
+				reason = "Error: " + prog_name + ".exe\n"; 
 				reason += "One or both of the files does not exist\n";
 				if (!useful_funcs::file_exists(filename1)) reason += "File: " + filename1 + " does not exist\n"; 
 				if (!useful_funcs::file_exists(filename2)) reason += "File: " + filename2 + " does not exist\n";
@@ -61,5 +61,5 @@ int main(int argc, char *argv[])
 		std::cerr << e.what();
 	}
 
-	return 0;
+	return 0; 
 }
