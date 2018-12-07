@@ -7,8 +7,6 @@
 // Inputs should be strings to represent file name and perhaps some other parameters
 // R. Sheehan 29 - 10 - 2015
 
-
-
 int main(int argc, char *argv[])
 {
 	// run program from command line
